@@ -13,7 +13,7 @@ function InputBox({
 }) {
   const amountInputId = useId();
   return (
-    <div className={`bg-white p-3 rounded-lg text-sm flex `}>
+    <div className={`bg-white p-3 rounded-lg text-sm flex flex-initial`}>
       <div className="w-1/2">
         <label
           htmlFor={amountInputId}
