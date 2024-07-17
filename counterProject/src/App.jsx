@@ -3,7 +3,12 @@ import "./App.css";
 
 function App() {
   //useState for counter
-  const [counter, setCounter] = useState(8);
+  const [counter, setCounter] = useState(1);
+  //NOTE: Interview Question //HACK: Without using another state change the value of multipliedBy8
+  let multipliedBy8 = counter * 8
+  const multipledValue =() => {
+    setCounter(counter + 1)
+  }
 
   //useState for color
   const [color, setColor] = useState("#d8b4fe");
@@ -66,8 +71,8 @@ function App() {
 
   //Function for decrementing counter
   const decrementCounter = () => {
-    if (counter === 8) {
-      alert("Can not go beyond 8");
+    if (counter === 1) {
+      alert("Can not go beyond 1");
     } else {
       setCounter(counter - 1);
     }
@@ -98,6 +103,9 @@ function App() {
           >
             -
           </button>
+          <br />
+          <button style={{ backgroundColor: "green" }} className="rounded-md" onClick={multipledValue}>By 8</button>
+          <p>Click above btn to get 8 Multiple: {multipliedBy8}</p>
         </div>
 
         <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
